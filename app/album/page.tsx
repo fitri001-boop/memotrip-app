@@ -9,7 +9,7 @@ import { useRouter } from 'next/navigation'
 export default function page() {
 
     const album = [
-        {id: 1, nama: "Holiday w/ YOU", by:"Chika", foto1:"assets/album/foto1.jpg", foto2:"assets/album/foto2.jpg", foto3:"assets/album/foto3.jpg"},
+        {id: 1, nama: "Holiday w/ YOU", by:"Chika", foto1:"assets/album/foto1.jpg", foto2:"assets/album/foto2.jpg", foto3:"assets/album/foto3.jpg", link:"/coba-coba/memori_in_bali"},
         {id: 2, nama: "Holiday w/ YOU", by:"Chika", foto1:"assets/album/foto1.jpg", foto2:"assets/album/foto2.jpg", foto3:"assets/album/foto3.jpg"},
         {id: 3, nama: "Holiday w/ YOU", by:"Chika", foto1:"assets/album/foto1.jpg", foto2:"assets/album/foto2.jpg", foto3:"assets/album/foto3.jpg"},
         {id: 4, nama: "Holiday w/ YOU", by:"Chika", foto1:"assets/album/foto1.jpg", foto2:"assets/album/foto2.jpg", foto3:"assets/album/foto3.jpg"},
@@ -44,7 +44,7 @@ export default function page() {
       <div
        className='gap-2 w-screen grid grid-cols-2 mt-5 px-2 '>
         {album.map((pt) => (     
-            <div onClick={() => router.push(`/album2?id=${pt.id}`)}
+            <div onClick={() => router.push(`${pt.link}`)}
             key={pt.id} className='relative h-40 w-full '>
 
             {/* foto-foto */}

@@ -29,9 +29,8 @@ export default function page() {
             {profile.map((index) => (
               
               <div
-                onClick={() => { const slug = index.nama.toLowerCase().replace(/\s+/g, '-')
-                router.push(`/chat3?id=${index.id}`+ `&image=${encodeURIComponent(index.img)}` + `&colors=${encodeURIComponent(index.color)}`)}}
-                key={index.id}
+              key={index.id}
+                onClick={() => router.push(`/chat2/${index.nama}`)}
                 className="flex flex-col gap-4 items-center justify-center mr-4">
                 <div
                   className={`${index.color}  h-18 w-18 rounded-full grid place-items-center shadow-[inset_0_4px_5px_rgba(0,0,0,0.2),0_4px_5px_rgba(0,0,0,0.2)]`}>
